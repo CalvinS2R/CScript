@@ -8,4 +8,10 @@ var BrowserWindow = window.open;
 
 if(!window) throw new RuntimeError("CScript requires a window, Quiting");
 
-function Electron() {}
+function Electron() {
+  if(!BrowserWindow) {
+    BrowserWindow("file:///C:\Windows\CSMedia\CScript\electronerrorv1.dll\electronerror.html","blank","width:",300,"height:",300,"toolbar","false");
+  } else {
+    return BrowserWindow;
+  }
+}
